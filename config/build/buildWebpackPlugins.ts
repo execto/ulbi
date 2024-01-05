@@ -4,7 +4,10 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 import { BuildWebpackConfigOptions } from "./types/buildWebpackConfigTypes";
 
-export const buildWebpackPlugins = ({ paths }: BuildWebpackConfigOptions) => {
+export const buildWebpackPlugins = ({
+  paths,
+  isDev,
+}: BuildWebpackConfigOptions) => {
   return [
     new MiniCssExtractPlugin({
       filename: "css/[name].[contenthash].css",
@@ -13,5 +16,9 @@ export const buildWebpackPlugins = ({ paths }: BuildWebpackConfigOptions) => {
     new HtmlWebpackPlugin({
       template: paths.html,
     }),
+    new webpack.DefinePlugin({
+      __IS_DEV__: isDev,
+    }),
+    new webpack.HotModuleReplacementPlugin(),
   ];
 };
