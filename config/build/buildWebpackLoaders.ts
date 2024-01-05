@@ -44,5 +44,16 @@ export const buildWebpackLoaders = ({
     ],
   };
 
-  return [sassLoader, tsLoader, svgLoader, fileLoader];
+  const babelLoader = {
+    test: /\.(js|jsx|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ["@babel/preset-env"],
+      },
+    },
+  };
+
+  return [sassLoader, babelLoader, tsLoader, svgLoader, fileLoader];
 };

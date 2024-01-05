@@ -6,7 +6,7 @@ export const classNames = (
   additional: Array<string | undefined>
 ): string => {
   return [
-    cls,
+    ...(cls?.length === 0 ? [] : [cls]),
     ...additional.filter(Boolean),
     ...Object.entries(mods)
       .filter(([, value]) => Boolean(value))
