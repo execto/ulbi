@@ -37,6 +37,7 @@ export const buildWebpackLoaders = ({
             localIdentName: isDev
               ? "[path][name]__[local]_[hash:base64:5]"
               : "[hash:base64:8]",
+            exportLocalsConvention: "camelCase",
           },
         },
       },
