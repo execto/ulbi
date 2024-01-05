@@ -1,7 +1,6 @@
 .sidebar {
   width: var(--sidebar-width);
   height: calc(100vh - var(--navbar-height));
-
   position: relative;
   transition: width 0.3s;
 }
