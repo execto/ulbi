@@ -6,7 +6,7 @@ import {
 } from "./config/build/types/buildWebpackConfigTypes";
 import { buildWebpackConfig } from "./config/build/buildWebpackConfig";
 
-export default (env: WebpackConfigEnv) => {
+export default (env: WebpackConfigEnv): webpack.Configuration => {
   const paths: WebpackConfigPaths = {
     entry: path.resolve(__dirname, "src", "index.tsx"),
     output: path.resolve(__dirname, "build"),

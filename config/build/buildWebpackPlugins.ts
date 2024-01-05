@@ -7,7 +7,7 @@ import { BuildWebpackConfigOptions } from "./types/buildWebpackConfigTypes";
 export const buildWebpackPlugins = ({
   paths,
   isDev,
-}: BuildWebpackConfigOptions) => {
+}: BuildWebpackConfigOptions): webpack.WebpackPluginInstance[] => {
   return [
     new MiniCssExtractPlugin({
       filename: "css/[name].[contenthash].css",
