@@ -3,5 +3,8 @@
   "Домой": "Home",
   "О сайте": "About",
   "Язык": "Русский",
-  "Cтраница не найдена": "Page not found"
+  "Cтраница не найдена": "Page not found",
+  "Ошибка приложения": "Something went wrong, try reload the page",
+  "Обновить страницу": "Reload the page"
+
 }
